@@ -1,0 +1,38 @@
+<ion-header>
+    
+      <ion-navbar>
+        <ion-title>Rellena Datos de Perfil</ion-title>
+      </ion-navbar>
+    
+    </ion-header>
+    
+    
+    <ion-content padding>
+
+      <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input [(ngModel)]="perfil.firstName" ></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input [(ngModel)]="perfil.lastName" ></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Cargo</ion-label>
+        <ion-input [(ngModel)]="perfil.cargo" ></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Perfil</ion-label>
+        <ion-select [(ngModel)]="perfil.perfil">
+          <ion-option value="Gerencial">Gerencia</ion-option>
+          <ion-option value="Coordinador">Coordinador</ion-option>
+          <ion-option value="Tecnico">Técnico / Supervisor</ion-option>
+        </ion-select>
+      </ion-item>
+    
+      <button ion-button clear bock (click)="createProfile()">Crear Perfil</button>
+    
+    </ion-content>
